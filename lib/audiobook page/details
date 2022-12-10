@@ -1,0 +1,32 @@
+
+
+
+details of keystore 
+alokjha1234
+alok
+sweden
+Peckish Human
+Meerut
+Uttar Pradesh
+91
+flutter build appbundle
+
+for signin sha keys
+
+keytool -list -v -keystore c:\Users\alokj\audio-keystore.jks -alias upload
+
+rmdir -Force -Recurse .git
+
+
+flutter clean
+flutter pub get
+flutter build appbundle
+
+flutter clean
+flutter pub get
+git init
+git add .
+git commit -m "solved bug-not able to open app"
+git branch -M main
+git remote add origin https://github.com/alokjha2/thebetteryou.git
+git push -u origin main

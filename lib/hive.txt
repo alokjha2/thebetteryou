@@ -1,0 +1,4 @@
+make docs
+initizisle
+open box(type of data in box)
+
