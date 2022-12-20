@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:alok/Homepage/home.dart';
 
 import 'package:alok/introduction/intro.dart';
+import 'package:alok/introduction/signpage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
@@ -50,6 +52,6 @@ class _MyAppState extends State<MyApp> {
   GetMaterialApp(
     title: "The better you",
     debugShowCheckedModeBanner: false, 
-    home : isviewed != 0 ? OnBoardpage() : MainPage(),
+    home : isviewed != 0 ? OnBoardpage() : FirebaseAuth.instance.currentUser == null ? Signup() :   MainPage(),
   );
 }
