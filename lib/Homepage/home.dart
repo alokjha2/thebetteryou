@@ -32,7 +32,7 @@ class MainPageState extends State<MainPage>{
   void initState() {
     super.initState();
 
-    if(_auth.currentUser != null) {}else {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Signup()));}
+    // if(_auth.currentUser != null) {}else {Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Signup()));}
   
   
   }

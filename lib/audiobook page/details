@@ -26,7 +26,7 @@ flutter clean
 flutter pub get
 git init
 git add .
-git commit -m "solved bug-not able to signup because of google.json"
+git commit -m "added web in project"
 git branch -M main
 git remote add origin https://github.com/alokjha2/thebetteryou.git
 git push -u origin main

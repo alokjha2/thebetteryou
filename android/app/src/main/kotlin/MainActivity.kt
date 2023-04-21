@@ -1,4 +1,4 @@
-package com.alok.audiobook
+package com.audiobook.betteryou
 
 import io.flutter.embedding.android.FlutterActivity
 
