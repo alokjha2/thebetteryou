@@ -26,9 +26,12 @@ flutter clean
 flutter pub get
 git init
 git add .
-git commit -m "added web in project"
+git commit -m "code is working in new laptop, changed kotlin version and removed some line of code from main.dart to make codebase work"
 git branch -M main
 git remote add origin https://github.com/alokjha2/thebetteryou.git
 git push -u origin main
 # git push -f origin main
 git push -f origin master
+
+git config --global user.email "alokj4702@gmail.com"
+git config --global user.name "alokjha2"

@@ -19,24 +19,24 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
   
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyBQ_l40VUKpCdCEU3IJLuzhlKxh-jdImRY",
-  authDomain: "alok-2b7e5.firebaseapp.com",
-  databaseURL: "https://alok-2b7e5-default-rtdb.firebaseio.com",
-  projectId: "alok-2b7e5",
-  storageBucket: "alok-2b7e5.appspot.com",
-  messagingSenderId: "634681148755",
-  appId: "1:634681148755:web:9fd7b7fe35d2d16f304da6",
-  measurementId: "G-2STWM522Z7"
+  //   options: const FirebaseOptions(
+  //     apiKey: "AIzaSyBQ_l40VUKpCdCEU3IJLuzhlKxh-jdImRY",
+  // authDomain: "alok-2b7e5.firebaseapp.com",
+  // databaseURL: "https://alok-2b7e5-default-rtdb.firebaseio.com",
+  // projectId: "alok-2b7e5",
+  // storageBucket: "alok-2b7e5.appspot.com",
+  // messagingSenderId: "634681148755",
+  // appId: "1:634681148755:web:9fd7b7fe35d2d16f304da6",
+  // measurementId: "G-2STWM522Z7"
 
-  )
+  // )
   );
-  FirebaseFirestore.instance
-      .enablePersistence(const PersistenceSettings(synchronizeTabs: false));
+  // FirebaseFirestore.instance
+  //     .enablePersistence(const PersistenceSettings(synchronizeTabs: false));
   
-  await Firebase.initializeApp(
+  // await Firebase.initializeApp(
     
-  );
+  // );
   await Hive.initFlutter(); 
   // Directory directory = await getApplicationDocumentsDirectory();
   // Hive.init(directory.path);

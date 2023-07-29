@@ -61,7 +61,9 @@ class _CommentPageState extends State<CommentPage> {
 
       body: Container(
         child: CommentBox(
-          userImage: user.photoURL,
+          // userImage:
+          // Image(image: imageProvider)
+          //  Image.network(user.photoURL),
               child: StreamBuilder(
                 stream : comment.limit(10).snapshots(),
                 builder : (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshots) {
