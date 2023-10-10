@@ -9,6 +9,7 @@
 import 'package:audio_service_web/audio_service_web.dart';
 import 'package:audio_session/audio_session_web.dart';
 import 'package:cloud_firestore_web/cloud_firestore_web.dart';
+import 'package:connectivity_plus/src/connectivity_plus_web.dart';
 import 'package:firebase_auth_web/firebase_auth_web.dart';
 import 'package:firebase_core_web/firebase_core_web.dart';
 import 'package:firebase_messaging_web/firebase_messaging_web.dart';
@@ -26,6 +27,7 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   AudioServiceWeb.registerWith(registrar);
   AudioSessionWeb.registerWith(registrar);
   FirebaseFirestoreWeb.registerWith(registrar);
+  ConnectivityPlusWebPlugin.registerWith(registrar);
   FirebaseAuthWeb.registerWith(registrar);
   FirebaseCoreWeb.registerWith(registrar);
   FirebaseMessagingWeb.registerWith(registrar);

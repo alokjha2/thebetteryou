@@ -24,6 +24,7 @@ dependencies:
   google_sign_in: 
   firebase_messaging: 
   comment_box: 
+  connectivity_plus:
   path_provider: 
   get_storage: 
   hive: 
@@ -74,35 +75,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/1st.png
-    - assets/1024.png
-    - assets/2.png
-    - assets/3rd.png
-    - assets/bookmark.png
-    - assets/comment.png
-    - assets/dark_mode.png
-    - assets/download.png
-    - assets/good_comment.png
-    - assets/goodsearch.png
-    - assets/google.png
-    - assets/listenbook.png
-    - assets/love.png
-    - assets/logo.png
-    - assets/hello.png
-    - assets/search.png
-    - assets/soon.png
-    - assets/student.png
-    - assets/take_notes.png
-    - assets/user.png
-    - assets/network_issue.png
-    - assets/no_data.png
-    - assets/instagram.png
-    - assets/telegram.png
-    - assets/twitter1.png
-    - assets/gmail_icon.png
-    - assets/youtube.png
-    - assets/oops.png    
-    - assets/text-files/aboutus.txt
-    - assets/text-files/privacy.txt
-    - assets/text-files/terms.txt
-
+  - assets/images/
+  - assets/fonts/
+  - assets/text-files/
+    

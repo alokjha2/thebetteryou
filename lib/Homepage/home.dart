@@ -1,6 +1,7 @@
 
 import 'package:alok/Homepage/Drawer/settings.dart';
 import 'package:alok/Homepage/content.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:cool_alert/cool_alert.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
@@ -44,142 +45,156 @@ class MainPageState extends State<MainPage>{
   Widget build(BuildContext context){
     
 
-    return Scaffold(
-      appBar: AppBar(
-        title: 
+    return 
+    
+    
+    Scaffold(
+      drawer: Drawere(),
+        appBar: AppBar(
+          title: 
+          
+          
+          
+          Text("Sweden"
+            ,style: 
+        
+        GoogleFonts.ubuntu(textStyle: 
+                  
+        
+        TextStyle(fontWeight: FontWeight.w600, 
+        ),
         
         
-        
-        Text("Sweden"
-          ,style: 
-      
-      GoogleFonts.ubuntu(textStyle: 
+        ),
+       ),
+       elevation: 10,
+        actions: [
+    
+            // search
+    
+            IconButton(
+              onPressed:(){
+              showSearch(context: context, delegate: DataSearch());
+             
+               } , 
+            icon: Icon(Icons.search),
+            
+            ),
+    
+    
+            // notifications
+            IconButton(
+              onPressed: ()
+                        => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> Notifications()
+                        )
+                        ),
+                        icon: 
+                        // Badge(
+                        //   child: 
+                          Icon(Icons.notifications_outlined),),
+                        // badgeColor: Colors.transparent,
+                        // badgeContent: Text("0", style: TextStyle(color: Colors.white),),),
+                        // ),
+                        
+                        
+                        
+    
+    
+    
+    
+    
+            
+    
+    
+    
+            
+            
+    
+            PopupMenuButton<int>(
+              // color: Colors.lightBlue,
+              onSelected: (item)=> onSelected(context, item),
+    
+              itemBuilder: (context)=> [
+    
+    
+             
+    
+                  // share button
+              PopupMenuItem(child: Row(children: [
                 
-      
-      TextStyle(fontWeight: FontWeight.w600, 
+                  Icon(Icons.share,
+                  color: Colors.blue,
+                  ),
+                  SizedBox(width: 8,),
+                  Text("Share", style: GoogleFonts.ubuntu(textStyle: TextStyle(fontWeight: FontWeight.w400)
+                ))
+                  ]
+                  ),
+                  value: 1,
+                ),
+    
+                // PopupMenuItem(child: Row(children: [
+                //   Icon(Icons.settings, color: Colors.lightBlue,),
+                //   SizedBox(width: 8,),
+                //   Text("Settings", style: GoogleFonts.ubuntu(textStyle: TextStyle(fontWeight: FontWeight.w400)
+                //   ))
+                // ],),
+                // value: 2,),
+    
+              
+                //Signout
+              PopupMenuDivider(height: 2,),
+              // Divider(height: 2,),
+              PopupMenuItem(
+                child: Row(children: [
+                  Icon(Icons.logout, 
+                  color: Colors.blue,
+                  ),
+                  SizedBox(width: 8,),
+    
+                Text("Sign out",style: GoogleFonts.ubuntu(textStyle: TextStyle(fontWeight: FontWeight.w400)
+                )),],),
+                
+                
+              value: 3,
+              )
+            ])
+    
+      ],),
+      body: Center(
+        child: StreamBuilder<ConnectivityResult>(
+          stream: Connectivity().onConnectivityChanged,
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              final connectivityResult = snapshot.data;
+              if (connectivityResult == ConnectivityResult.none) {
+                // No internet connection, display an offline page
+                return Text("No data");
+              } else {
+                // Internet connection available, display the MainPage
+                return 
+              Content();
+              }
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text('Error: ${snapshot.error}'),
+              );
+            } else {
+              return const CircularProgressIndicator();
+            }
+          },
+        ),
       ),
-      
-      
-      ),
-     ),
-     elevation: 10,
-      actions: [
-
-          // search
-
-          IconButton(
-            onPressed:(){
-            showSearch(context: context, delegate: DataSearch());
-           
-             } , 
-          icon: Icon(Icons.search),
-          
-          ),
+    );
+  }
+    
 
 
-          // notifications
-          IconButton(
-            onPressed: ()
-                      => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> Notifications()
-                      )
-                      ),
-                      icon: 
-                      // Badge(
-                      //   child: 
-                        Icon(Icons.notifications_outlined),),
-                      // badgeColor: Colors.transparent,
-                      // badgeContent: Text("0", style: TextStyle(color: Colors.white),),),
-                      // ),
-                      
-                      
-                      
-
-
-
-
-
-          
-
-
-
-          
-          
-
-          PopupMenuButton<int>(
-            // color: Colors.lightBlue,
-            onSelected: (item)=> onSelected(context, item),
-
-            itemBuilder: (context)=> [
-
-
-            // PopupMenuItem(child: 
-            //   Row(
-            //       children: [
-            //     // dark theme
-            //     Icon(Icons.dark_mode, 
-            //     color: Colors.blue,
-            //     ),
-            //     SizedBox(width: 8,),
-
-            
-            // Text("Dark/Light", 
-            // style: GoogleFonts.ubuntu(textStyle: TextStyle(fontWeight: FontWeight.w400)
-            //   ),),]),
-            // value: 0,
-            // ),
-
-                // share button
-            PopupMenuItem(child: Row(children: [
-              
-                Icon(Icons.share,
-                color: Colors.blue,
-                ),
-                SizedBox(width: 8,),
-                Text("Share", style: GoogleFonts.ubuntu(textStyle: TextStyle(fontWeight: FontWeight.w400)
-              ))
-                ]
-                ),
-                value: 1,
-              ),
-
-              // PopupMenuItem(child: Row(children: [
-              //   Icon(Icons.settings, color: Colors.lightBlue,),
-              //   SizedBox(width: 8,),
-              //   Text("Settings", style: GoogleFonts.ubuntu(textStyle: TextStyle(fontWeight: FontWeight.w400)
-              //   ))
-              // ],),
-              // value: 2,),
-
-            
-              //Signout
-            PopupMenuDivider(height: 2,),
-            // Divider(height: 2,),
-            PopupMenuItem(
-              child: Row(children: [
-                Icon(Icons.logout, 
-                color: Colors.blue,
-                ),
-                SizedBox(width: 8,),
-
-              Text("Sign out",style: GoogleFonts.ubuntu(textStyle: TextStyle(fontWeight: FontWeight.w400)
-              )),],),
-              
-              
-            value: 3,
-            )
-          ])
-
-    ],),
-
-
-         body : 
-        //  result !=  true?
-          Content() ,
+        
           // : settings(),
         // Offline(),
         
-        drawer: Drawere(),
-      );
+       
     }
     
       void onSelected(BuildContext context, int item, ){
@@ -230,6 +245,6 @@ class MainPageState extends State<MainPage>{
             break;
         }
       }
-    }
+    
 
    

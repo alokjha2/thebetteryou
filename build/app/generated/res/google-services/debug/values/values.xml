@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">634681148755-vtf5kg5dhkc7cpph212aapf0c3ss0jun.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://alok-2b7e5-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">634681148755</string>
+    <string name="google_api_key" translatable="false">AIzaSyDdI1nbflxHpGsXrD9Wx9o8LZzw2YqJxuE</string>
+    <string name="google_app_id" translatable="false">1:634681148755:android:0e38ab562217fdbc304da6</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDdI1nbflxHpGsXrD9Wx9o8LZzw2YqJxuE</string>
+    <string name="google_storage_bucket" translatable="false">alok-2b7e5.appspot.com</string>
+    <string name="project_id" translatable="false">alok-2b7e5</string>
+</resources>

@@ -1,0 +1,52 @@
+Sweden
+
+
+
+Privacy policy
+
+
+This document describes the data collected by "Sweden" app and third party software . By using the app, user consents to the privacy policy.
+
+1. AudioBook
+All of the AudioBooks that we upload will stored in the app's internal storage. The AudioBooks can't be accessed by any other app on the phone. The only way to access the AudioBooks is to use the app .  To be clear: only user of the app can see AudioBooks stored in the app.
+
+2. Email address 
+Using the "Technical support" in the app will open an email app and allow to send an email to alokj4702@gmail.com . After receiving an email the user's address will be used to answer any question or problems related to the app. Email address are not stored anywhere outside the email service provider used by the developer and our server (Firebase). The diagnostic data that can be sent using the "Technical support" function contains: device' model/vendor, version of the operating system, operations performed in the app, and optionally the books you listen. Sending which books you listen is optional, is set in the app's settings, and is meant to help diagnose an issue with a specific books. Books are never sent with the aforementioned diagnostic info.
+
+3. Information collected
+
+    3.1 => Identifiers
+    3.2 => Geolocation data
+    3.3 => Internet or other electronic network activity Information
+
+    purpose => Analytics advertising
+
+4. Purpose of collecting the Information
+    4.1 => This app uses Firebase and Google Analytics for Firebase as an Analytic tool and server. It provided the developer information about usage of the app like: number of the active users, most popular devices, etc. The information is used to analyze performance of the app and detect any problems , for example after publishing an update. Advertising Id is not collected , so no demographies or interests data is collected. IP addresses are anonymized.
+
+    4.2 => The app uses Some AD platform to provide ADs(AdMob and InMobi)
+    AdMob is an advertising service provided by Google. AdMob can collect and use anonymous data to customize the ads for the user. It may use unique Advertising ID which is provided by Google Play services on the device. For some users ,there is an additional option to choose between personalized and non-personalized ads. The decision can be changed at any time. More information about Google's ads can be found on their official website. The difference between personalized and non-personalized ads is explained on Google clearly , so you can clearly get what is the difference between these 2.
+
+5. Selling "personal" information
+The app displays ads on some devices. If personalized advertising is enabled, then ad networks may use personal information listed above. Sharing these information may be considered as sale under California Consumer Privacy Act(CCPA). The same categories of information were used during last 12 months. Please check that no personally identifiable information like phone number is even collected by the app. It's worth repeating that books that you listen will be only accessed by the user of that app(you), noone other than you , can access the data , so feel free while browsing the books .;
+
+6. Policy changes
+
+All policy changes will be reflected by updates of this document.
+
+7. Data deletion 
+Data used by analytic tools(Firebase Analytics) can be deleted upon request.
+
+
+
+
+. Contact
+Contact person: Alok Jha
+Email address: alokj4702@gmail.com
+The app was developed by AJ(alok Jha)
+
+Updated on Jan 1st,2022
+
+
+
+

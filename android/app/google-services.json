@@ -8,63 +8,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:634681148755:android:190cb0f0f4884128304da6",
+        "mobilesdk_app_id": "1:634681148755:android:0e38ab562217fdbc304da6",
         "android_client_info": {
-          "package_name": "com.alok.audiobook"
+          "package_name": "com.peckishhuman.thebetteryou"
         }
       },
       "oauth_client": [
         {
-          "client_id": "634681148755-jqlk99up5lhdj6iomdr5ojd1hb9bjmst.apps.googleusercontent.com",
+          "client_id": "634681148755-ki9to3ueo0tsmd6uigrc78lu9o7cgm6n.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.alok.audiobook",
-            "certificate_hash": "7e1a4e95332879e62b79528013091eb27f42aa40"
-          }
-        },
-        {
-          "client_id": "634681148755-sq48bph9b6cfajk6tcalaho2cdsap0ro.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.alok.audiobook",
-            "certificate_hash": "5154879011d533a8fdd2ebf67a1a2348b32eddb9"
-          }
-        },
-        {
-          "client_id": "634681148755-vtf5kg5dhkc7cpph212aapf0c3ss0jun.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDdI1nbflxHpGsXrD9Wx9o8LZzw2YqJxuE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "634681148755-vtf5kg5dhkc7cpph212aapf0c3ss0jun.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:634681148755:android:7efae1ddb4182c86304da6",
-        "android_client_info": {
-          "package_name": "com.audiobook.betteryou"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "634681148755-ug6bn8cj2nd9iv2jtcqd0jtnnpbaf1h5.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.audiobook.betteryou",
-            "certificate_hash": "5154879011d533a8fdd2ebf67a1a2348b32eddb9"
+            "package_name": "com.peckishhuman.thebetteryou",
+            "certificate_hash": "93b59dbddc3555dd8c6d5831c5be965753afbec9"
           }
         },
         {

@@ -17,6 +17,8 @@ keytool -list -v -keystore c:\Users\alokj\audio-keystore.jks -alias upload
 
 rmdir -Force -Recurse .git
 
+keytool -list -v -keystore C:/Users/pecki/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+
 
 flutter clean
 flutter pub get

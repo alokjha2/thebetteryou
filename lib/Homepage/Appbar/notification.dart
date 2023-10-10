@@ -1,57 +1,80 @@
-import 'package:alok/Homepage/home.dart';
-import 'package:alok/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+// import 'package:google_fonts/google_fonts';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class Notifications extends StatelessWidget{
+class Notifications extends StatefulWidget {
   @override
-  Widget build(BuildContext context){
-    return Scaffold(appBar: 
-    AppBar(
-      title: Text("Notification",style: 
-      
-      GoogleFonts.ubuntu(textStyle: 
-                
-      
-      TextStyle(fontWeight: FontWeight.w600, fontSize: 20,
-      ),
-      )
-      
-      ),
-      // leading: IconButton(onPressed: (){
-      //   Navigator.of(context).pop(MainPage());
-      // }, icon: Icon(Icons.clear)),
-      centerTitle: true,
-      elevation: 2,
-      // toolbarHeight: 24,
-    ),
-    body: Column(children: [
-      Image.asset("assets/soon.png"),
-      SizedBox(height: 4,),
+  _NotificationsState createState() => _NotificationsState();
+}
 
-      
-      Center(
-        child: Text("We are coming up with an Awesome auto saving notification feature! ", style:
-        
-        GoogleFonts.ubuntu(textStyle: 
-        
-        
-         TextStyle(fontSize: 20, color: Colors.grey),),),
+class _NotificationsState extends State<Notifications> {
+  List<String> savedNotifications = [];
+
+  @override
+  void initState() {
+    super.initState();
+    // Fetch saved notifications from local storage
+    fetchSavedNotifications();
+  }
+
+  Future<void> fetchSavedNotifications() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String notificationData = prefs.getString('notificationData') ?? '';
+
+    // Split the stored data and add it to the list
+    setState(() {
+      savedNotifications = notificationData.isNotEmpty
+          ? notificationData.split(',')
+          : [];
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Notifications",
+          style: GoogleFonts.ubuntu(
+            textStyle: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 20,
+            ),
+          ),
+        ),
+        centerTitle: true,
+        elevation: 2,
       ),
-      SizedBox(height: 4,),
-      Text("But good things come to those who wait :) ", style: 
-      GoogleFonts.ubuntu(textStyle: 
-      
-      
-      TextStyle(fontSize: 20, color: Colors.grey)),),
-      SizedBox(height: 4,),
-      Text("Stay tuned !",style: 
-      GoogleFonts.ubuntu(textStyle: 
-      
-      
-      TextStyle(fontSize: 20, color: Colors.grey)))
-    ],)
+      body: Column(
+        children: [
+          if (savedNotifications.isNotEmpty)
+            // Display saved notifications if there are any
+            Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: savedNotifications.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(savedNotifications[index]),
+                    // You can customize how each notification is displayed here
+                  );
+                },
+              ),
+            )
+          else
+            // If there are no saved notifications, show a message
+            Center(
+              child: Text(
+                "No saved notifications yet!",
+                style: GoogleFonts.ubuntu(
+                  textStyle: TextStyle(fontSize: 20, color: Colors.grey),
+                ),
+              ),
+            ),
+        ],
+      ),
     );
   }
 }
